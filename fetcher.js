@@ -77,7 +77,7 @@ export default {
   async scheduled(event, env, ctx) {
     // let scheduledTime = new Date(event.scheduledTime)
     console.log(`Scheduled event fired. cron: ${event.cron}`)
-    let r = await fetch(env.SCHEDULE_URL,
+    let r = await fetch(env.SCHEDULED_URL,
       {
         method: 'POST',
         headers: {
