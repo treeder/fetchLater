@@ -88,5 +88,9 @@ export default {
       })
     console.log("R.ok:", r.ok)
     console.log(await r.text())
+    if (!r.ok) {
+      console.error("R NOT OK", r.status)
+      throw new Error("scheduled endpoint failed")
+    }
   },
 }
